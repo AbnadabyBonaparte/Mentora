@@ -5,7 +5,6 @@ import { ChevronRight, Zap, TrendingUp, Users, Award, Lightbulb, ArrowRight } fr
 
 export default function Home() {
   const { user, isAuthenticated } = useAuth();
-
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -73,9 +72,9 @@ export default function Home() {
             </div>
             <div className="relative animate-fade-in-down">
               <div className="absolute inset-0 bg-gradient-to-br from-[#2962FF]/20 to-[#00E676]/20 rounded-2xl blur-3xl animate-pulse"></div>
-              <img 
-                src="/hero-banner.jpg" 
-                alt="Estudantes com IA" 
+              <img
+                src="/hero-banner.jpg"
+                alt="Estudantes com IA"
                 className="relative rounded-2xl shadow-2xl w-full h-auto object-cover hover-lift"
               />
             </div>
@@ -94,7 +93,6 @@ export default function Home() {
               Tudo que você precisa para transformar a educação com inteligência artificial
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Feature 1 */}
             <div className="group bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-[#2962FF] hover:shadow-xl transition hover-lift animate-fade-in-up" style={{animationDelay: '0.1s'}}>
@@ -106,7 +104,6 @@ export default function Home() {
                 Avaliações inteligentes que se adaptam ao nível do aluno, identificando lacunas de aprendizado em tempo real.
               </p>
             </div>
-
             {/* Feature 2 */}
             <div className="group bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-[#00E676] hover:shadow-xl transition hover-lift animate-fade-in-up" style={{animationDelay: '0.2s'}}>
               <div className="w-16 h-16 bg-gradient-to-br from-[#00E676] to-[#2962FF] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
@@ -117,7 +114,6 @@ export default function Home() {
                 IA prevê desempenho futuro em ENEM, provas e concursos com precisão estatística avançada.
               </p>
             </div>
-
             {/* Feature 3 */}
             <div className="group bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-[#9C27B0] hover:shadow-xl transition hover-lift animate-fade-in-up" style={{animationDelay: '0.3s'}}>
               <div className="w-16 h-16 bg-gradient-to-br from-[#9C27B0] to-[#FF7043] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
@@ -129,12 +125,11 @@ export default function Home() {
               </p>
             </div>
           </div>
-
           {/* Dashboard Image */}
           <div className="rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-200 hover-lift animate-fade-in-up">
-            <img 
-              src="/dashboard-interface.jpg" 
-              alt="Dashboard Interface" 
+            <img
+              src="/dashboard-interface.jpg"
+              alt="Dashboard Interface"
               className="w-full h-auto object-cover"
             />
           </div>
@@ -146,9 +141,9 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="rounded-2xl overflow-hidden shadow-2xl hover-lift animate-fade-in-left">
-              <img 
-                src="/performance-analytics.jpg" 
-                alt="Analytics de Desempenho" 
+              <img
+                src="/performance-analytics.jpg"
+                alt="Analytics de Desempenho"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -193,7 +188,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Impact Section */}
+      {/* Impact Section - IMAGEM ALTERADA AQUI */}
       <section id="impact" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -204,12 +199,11 @@ export default function Home() {
               Histórias de sucesso de alunos, escolas e famílias transformadas pela Mentora
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="rounded-2xl overflow-hidden shadow-xl hover-lift animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-              <img 
-                src="/student-success-photo.jpg" 
-                alt="Sucesso dos Alunos" 
+              <img
+                src="/student-success-photo.jpg"
+                alt="Sucesso dos Alunos"
                 className="w-full h-96 object-cover"
               />
               <div className="p-6 bg-gradient-to-r from-[#2962FF]/10 to-[#00E676]/10">
@@ -217,11 +211,10 @@ export default function Home() {
                 <p className="text-gray-600">Diagnósticos claros aumentam confiança e engajamento</p>
               </div>
             </div>
-
             <div className="rounded-2xl overflow-hidden shadow-xl hover-lift animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <img 
-                src="/school-impact.jpg" 
-                alt="Impacto nas Escolas" 
+              <img
+                src="/school-impact.jpg"
+                alt="Impacto nas Escolas"
                 className="w-full h-96 object-cover"
               />
               <div className="p-6 bg-gradient-to-r from-[#9C27B0]/10 to-[#FF7043]/10">
@@ -230,11 +223,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           <div className="rounded-2xl overflow-hidden shadow-xl hover-lift animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-            <img 
-              src="/b2c-banner.jpg" 
-              alt="Famílias Engajadas" 
+            <img
+              src="/family-learning.jpg"
+              alt="Famílias Engajadas"
               className="w-full h-96 object-cover"
             />
             <div className="p-6 bg-gradient-to-r from-[#00E676]/10 to-[#2962FF]/10">
@@ -256,13 +248,12 @@ export default function Home() {
               B2C, B2B e B2G - Mentora escala para qualquer segmento
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* B2C */}
             <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition hover-lift animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-              <img 
-                src="/b2c-banner.jpg" 
-                alt="B2C - Famílias" 
+              <img
+                src="/b2c-banner.jpg"
+                alt="B2C - Famílias"
                 className="w-full h-64 object-cover"
               />
               <div className="p-8 bg-gradient-to-br from-[#2962FF]/5 to-[#00E676]/5">
@@ -271,12 +262,11 @@ export default function Home() {
                 <Button className="w-full bg-[#2962FF] hover:bg-[#1a3fa0] text-white">Saiba Mais</Button>
               </div>
             </div>
-
             {/* B2B */}
             <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition hover-lift animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <img 
-                src="/b2b-banner.jpg" 
-                alt="B2B - Escolas" 
+              <img
+                src="/b2b-banner.jpg"
+                alt="B2B - Escolas"
                 className="w-full h-64 object-cover"
               />
               <div className="p-8 bg-gradient-to-br from-[#9C27B0]/5 to-[#FF7043]/5">
@@ -285,12 +275,11 @@ export default function Home() {
                 <Button className="w-full bg-[#9C27B0] hover:bg-[#6a1b7a] text-white">Saiba Mais</Button>
               </div>
             </div>
-
             {/* B2G */}
             <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition hover-lift animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-              <img 
-                src="/b2g-banner.jpg" 
-                alt="B2G - Governos" 
+              <img
+                src="/b2g-banner.jpg"
+                alt="B2G - Governos"
                 className="w-full h-64 object-cover"
               />
               <div className="p-8 bg-gradient-to-br from-[#FF7043]/5 to-[#2962FF]/5">
@@ -314,7 +303,6 @@ export default function Home() {
               Diferenciais competitivos que ninguém copia facilmente
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-[#2962FF]/10 to-[#00E676]/10 rounded-xl p-8 border-l-4 border-[#2962FF] hover-lift animate-fade-in-up" style={{animationDelay: '0.1s'}}>
               <div className="flex items-start gap-4">
@@ -325,7 +313,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-[#9C27B0]/10 to-[#FF7043]/10 rounded-xl p-8 border-l-4 border-[#9C27B0] hover-lift animate-fade-in-up" style={{animationDelay: '0.2s'}}>
               <div className="flex items-start gap-4">
                 <Lightbulb className="w-8 h-8 text-[#9C27B0] flex-shrink-0 mt-1" />
@@ -335,7 +322,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-[#00E676]/10 to-[#2962FF]/10 rounded-xl p-8 border-l-4 border-[#00E676] hover-lift animate-fade-in-up" style={{animationDelay: '0.3s'}}>
               <div className="flex items-start gap-4">
                 <TrendingUp className="w-8 h-8 text-[#00E676] flex-shrink-0 mt-1" />
@@ -345,7 +331,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-[#FF7043]/10 to-[#9C27B0]/10 rounded-xl p-8 border-l-4 border-[#FF7043] hover-lift animate-fade-in-up" style={{animationDelay: '0.4s'}}>
               <div className="flex items-start gap-4">
                 <Users className="w-8 h-8 text-[#FF7043] flex-shrink-0 mt-1" />
@@ -394,7 +379,6 @@ export default function Home() {
                 O sistema nervoso da educação brasileira
               </p>
             </div>
-
             <div>
               <h4 className="font-bold text-white mb-4">Produto</h4>
               <ul className="space-y-2 text-sm">
@@ -403,7 +387,6 @@ export default function Home() {
                 <li><a href="#" className="hover:text-[#00E676] transition">Segurança</a></li>
               </ul>
             </div>
-
             <div>
               <h4 className="font-bold text-white mb-4">Empresa</h4>
               <ul className="space-y-2 text-sm">
@@ -412,7 +395,6 @@ export default function Home() {
                 <li><a href="#" className="hover:text-[#00E676] transition">Contato</a></li>
               </ul>
             </div>
-
             <div>
               <h4 className="font-bold text-white mb-4">Legal</h4>
               <ul className="space-y-2 text-sm">
@@ -422,7 +404,6 @@ export default function Home() {
               </ul>
             </div>
           </div>
-
           <div className="border-t border-gray-800 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-sm text-gray-400">
