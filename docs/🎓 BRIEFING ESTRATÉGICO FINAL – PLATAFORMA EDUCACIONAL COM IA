@@ -1,145 +1,214 @@
-# 🎓 BRIEFING ESTRATÉGICO FINAL – PLATAFORMA EDUCACIONAL COM IA
+# 🚀 MENTORA
 
-## 1. 🔍 PROPÓSITO CENTRAL (WHY)
+## Plataforma Nacional de Diagnóstico Educacional Inteligente (IA)
 
-Desenvolver uma plataforma educacional baseada em IA com capacidade de:
-
-- Avaliar o desempenho de alunos (tipo ENEM adaptado por idade/faixa escolar);
-- Identificar lacunas de aprendizado e oferecer trilhas de reforço personalizadas;
-- Utilizar avatares de IA para ministrar aulas em ambientes virtuais interativos;
-- Gerar relatórios detalhados para pais e escolas;
-- Reduzir custos com professores humanos e infraestrutura física;
-- Tornar o acesso à educação de qualidade mais acessível, escalável e engajador.
-
-## 2. 📊 ANÁLISE DE MERCADO E CONCORRÊNCIA (MARKET FIT)
-
-- **Tamanho e Crescimento do Mercado**  
-  O mercado global de EdTech foi estimado em US$ 215 bilhões em 2024 e deve atingir US$ 773 bilhões até 2033, com CAGR de 17,34%.  
-  No Brasil, o setor é o 2º maior polo global de EdTechs, com mais de 900 startups ativas, representando cerca de 70% das EdTechs na América Latina e atraindo 80% dos investimentos regionais (US$ 475,6 milhões acumulados de 2015 a 2024). O mercado brasileiro deve acompanhar o crescimento global, estimado em R$ 30-40 bilhões em 2026, impulsionado por IA personalizada e demandas pós-pandemia por educação remota e preparação para provas como ENEM.
-
-- **Tendências Chave**  
-  Expansão da IA para personalização (crescimento de 38% ao ano globalmente até 2033), gamificação, mobile-first e foco em impacto mensurável. No Brasil, ênfase em soluções acessíveis para baixa conectividade e alinhamento com BNCC.
-
-- **Concorrentes Principais**  
-  - **Geekie**: Foco em diagnóstico adaptativo e IA para escolas.  
-  - **Descomplica**: Preparação para ENEM e vestibulares com aulas online.  
-  - **Teachy**: IA para professores e plataformas personalizadas.  
-  - **Layers Education**: Soluções de gestão e aprendizado personalizado.  
-  - **Stoodi/MeSalva**: Reforço online para concursos.  
-  **Posicionamento**: Nossa vantagem é avatares IA 100% automatizados, offline-ready e custo baixo para famílias, diferenciando de plataformas que dependem de professores humanos ou são mais caras.
-
-## 3. 🎯 OBJETIVOS ESTRATÉGICOS
-
-**Curto Prazo (MVP)**  
-- Diagnóstico adaptativo com foco em Português e Matemática (Ensino Fundamental);  
-- Produção de 30+ vídeos com avatares IA em ambientes digitais;  
-- Relatório automatizado para pais com sugestões de reforço.
-
-**Médio Prazo**  
-- Expansão para simulados de concursos (ENEM, OAB, PF, Medicina);  
-- Integração com mobile app com microlearning gamificado;  
-- Monetização híbrida (freemium + simulados + relatórios premium).
-
-**Longo Prazo**  
-- Tornar-se referência nacional em diagnóstico educacional IA;  
-- Licenciamento para escolas e governos;  
-- Abertura de API para integração com ecossistemas educacionais.
-
-## 4. 🧑‍🎓 PÚBLICO-ALVO
-
-**Primário**  
-- Crianças e jovens de 6 a 17 anos (K-12);  
-- Pais e responsáveis interessados em acompanhamento escolar personalizado.
-
-**Secundário**  
-- Estudantes de concursos e vestibulares (ENEM, OAB, etc.).
-
-**Institucional (futuro)**  
-- Escolas privadas, redes públicas, secretarias de educação.
-
-## 5. 💡 DIFERENCIAIS COMPETITIVOS
-
-- IA educacional com personalização total e avaliação adaptativa;  
-- Aulas com avatares IA sem professores humanos ou estúdios;  
-- Conteúdo escalável e acessível em múltiplos dispositivos;  
-- Relatórios inteligentes e gamificação integrada;  
-- Modelo mobile-first + offline-ready.
-
-## 6. 💸 MODELO DE NEGÓCIO
-
-**Monetização**  
-- Assinatura mensal (freemium + premium);  
-- Venda unitária de simulados e pacotes de reforço;  
-- Licenciamento institucional (escolas e governos);  
-- Add-ons: relatórios IA, mentor IA, certificados digitais.
-
-**Projeção Inicial**  
-- Custo estimado MVP: R$ 100-150 mil (incluindo dev IA, design, API e testes);  
-- CAC médio: R$ 10-20 via mídia social;  
-- LTV estimado: R$ 200-500/aluno;  
-- Break-even estimado: 1.000 assinantes ativos.
-
-## 7. 🧱 MVP & ROADMAP TÉCNICO
-
-**MVP Prioritário**  
-- Diagnóstico IA (Português + Matemática);  
-- Relatório personalizado;  
-- 15 aulas com avatar IA;  
-- Integração mobile (React Native);  
-- Backend Python + OpenAI API (FastAPI);  
-- Gamificação básica.
-
-**Roadmap**  
-- **Mês 1**: Pesquisa + Validação (Google Forms);  
-- **Mês 2**: Prototipação + Diagnóstico funcional;  
-- **Mês 3**: Beta com 100 famílias;  
-- **Mês 4**: Lançamento oficial + tração de MRR.
-
-## 8. 📊 HIPÓTESES A VALIDAR E ESTRATÉGIA DE VALIDAÇÃO
-
-**Hipóteses**  
-- Pais pagariam R$ 29/mês por relatório + reforço IA?  
-- Crianças se engajam com avatar IA mais do que com ação humana tradicional?  
-- É possível escalar com CAC abaixo de R$ 15 com Instagram Ads?
-
-**Plano de Validação**  
-Criar landing page para captar leads (meta: 200-300 pais/estudantes via ads no Instagram/TikTok). Usar Google Forms para surveys (meta: 30% interesse em pagar). Testar protótipo beta com 100 usuários para métricas iniciais: 500 usuários ativos, 20% conversão freemium → premium, NPS > 40, retenção mensal > 60%.
-
-**Estratégia de Growth Inicial**  
-Aquisição via Meta Ads + parcerias com influenciadores educacionais (TikTok/Instagram). Métricas de tração alvo: Taxa de conversão 15-20%, engajamento >70% nos módulos.
-
-## 9. ⚠️ RISCOS & MITIGAÇÕES
-
-- **LGPD (dados sensíveis)**: Auditoria de dados + consentimento parental explícito (art. 14 LGPD), verificação de idade e anonimização de dados.  
-- **Precisão da IA**: Treinamento com datasets brasileiros (BNCC); testes beta com educadores.  
-- **Acesso digital**: Versão offline e leve para locais com baixa conectividade; parcerias com provedores de internet rural.  
-- **Regulamentação Educacional**: Alinhamento com MEC/BNCC; auditoria inicial por DPO (Encarregado de Proteção de Dados).
-
-## 10. 👥 EQUIPE IDEAL INICIAL
-
-- CEO Educacional (fundador com visão de produto);  
-- Engenheiro IA (freelancer ou cofounder);  
-- Designer UI/UX (Figma);  
-- Dev Fullstack (React Native + Python);  
-- Marketing de aquisição (Meta Ads, TikTok).
-
-## 11. 💰 ESTRATÉGIA DE FUNDING
-
-- **Rodada Inicial**: Pre-seed/Seed de R$ 500k-2M (bootstrapping + anjos para MVP e tração inicial).  
-- **Investidores-Alvo**: Fundos focados em EdTech como Educapital, Invest Tech, Vox Capital; VCs gerais como MAYA Capital, Bossanova Investimentos, Astella, Canary, Anjos do Brasil. Aceleradoras: ACE, Cubo Itaú, Startup Weekend EdTech.  
-- **Exemplos de Sucessos**: Teachy (US$ 8.6M Series A), Layers Education (Seed recente), Principia (Series A US$ 14M).
-
-## 12. 📈 IMPACTO E SUSTENTABILIDADE
-
-- Versão gratuita para baixa renda (impacto social, redução de lacunas em 30% baseado em betas);  
-- Parcerias com ONGs, escolas públicas, aceleradoras e editais do MEC;  
-- Visão de longo prazo: Educação como direito + tecnologia como ponte.
-
-**User Journey Simples**  
-Cadastro → Diagnóstico → Relatório → Aulas IA → Gamificação → Relatório mensal
+**Versão:** 1.0 (Projeto Executivo 10/10)
 
 ---
 
-**Pronto para se tornar a próxima grande revolução em educação personalizada por IA.**
+## 1. VISÃO EXECUTIVA (EXECUTIVE SUMMARY)
 
-Este briefing pode ser usado diretamente como README.md no GitHub ou adaptado para um Business Model Canvas visual (recomendo ferramentas como Canva, Miro ou Notion para fluxogramas e diagramas).
+**Mentora** é uma plataforma educacional baseada em Inteligência Artificial cujo núcleo não é conteúdo, mas **diagnóstico educacional contínuo**, preditivo e acionável.
+
+Ela funciona como o **“sistema nervoso da educação”**, identificando lacunas de aprendizado, prevendo desempenho futuro e prescrevendo trilhas personalizadas — para alunos, pais, escolas e governos.
+
+> 🔑 *Se o ENEM mede o passado, a Mentora prevê o futuro.*
+
+**Tese central:**
+
+* Avaliar melhor → Ensinar melhor → Custar menos → Escalar infinitamente
+
+---
+
+## 2. PROBLEMA REAL (COM DADOS)
+
+### Problemas estruturais do sistema educacional brasileiro:
+
+* ❌ Avaliações tardias (provas anuais ou bianuais)
+* ❌ Falta de diagnóstico por habilidade da BNCC
+* ❌ Ensino homogêneo para alunos heterogêneos
+* ❌ Pais sem visibilidade real do aprendizado
+* ❌ Altíssimo custo humano por aluno
+
+### Dados críticos:
+
+* Apenas **9% dos alunos do ensino médio** aprendem matemática no nível adequado (SAEB)
+* **Mais de 70%** das escolas não usam dados para personalização
+* O ENEM avalia **1x por ano** — tarde demais para correção
+
+📌 **Conclusão:** O problema não é falta de aula. É falta de diagnóstico contínuo.
+
+---
+
+## 3. SOLUÇÃO: O QUE É A MENTORA
+
+A **Mentora** é um **Sistema Inteligente de Diagnóstico Educacional (SIDE)** que:
+
+1. Avalia continuamente o aluno
+2. Mapeia habilidades BNCC em tempo real
+3. Prediz desempenho futuro (ENEM, provas, concursos)
+4. Prescreve trilhas personalizadas
+5. Gera relatórios claros para pais, escolas e gestores
+
+🎯 **Produto principal:** Diagnóstico
+🎓 Conteúdo é meio, não fim.
+
+---
+
+## 4. COMO FUNCIONA (ARQUITETURA DO PRODUTO)
+
+### Jornada do Usuário (Aluno)
+
+1. Cadastro
+2. Diagnóstico adaptativo inicial
+3. Score por habilidade
+4. Trilha personalizada
+5. Microavaliações semanais
+6. Reavaliação automática
+
+### Jornada do Usuário (Pais / Escolas)
+
+* Dashboard com:
+
+  * Evolução por habilidade
+  * Risco de reprovação
+  * Previsão de desempenho
+  * Recomendações automáticas
+
+---
+
+## 5. TECNOLOGIA (STACK REALISTA E ESCALÁVEL)
+
+### Backend
+
+* Python + FastAPI
+* Modelos de IA híbridos (LLMs + modelos estatísticos)
+* Banco de dados educacional proprietário
+
+### IA & Dados
+
+* Diagnóstico adaptativo
+* Item Response Theory (IRT)
+* Machine Learning preditivo
+* Fine-tuning com dados BNCC
+
+### Frontend
+
+* Mobile-first (React Native)
+* Offline-ready
+
+---
+
+## 6. DIFERENCIAL COMPETITIVO REAL (MOAT)
+
+### O que a Mentora tem que ninguém copia facilmente:
+
+1. 📊 Banco de dados longitudinal por aluno
+2. 🧠 Modelo diagnóstico proprietário
+3. 📈 Histórico preditivo de performance
+4. 🏫 Integração escola → família → governo
+
+> Avatares são copiáveis. Dados educacionais não.
+
+---
+
+## 7. MODELO DE NEGÓCIO (DINHEIRO DE VERDADE)
+
+### B2C – Famílias
+
+* Freemium
+* Premium: R$ 29–49/mês
+
+### B2B – Escolas privadas
+
+* Licença anual: R$ 25–60/aluno/ano
+
+### B2G – Governos
+
+* Contratos institucionais
+* R$ 3–15 milhões por rede
+
+### Add-ons
+
+* Relatórios avançados
+* APIs educacionais
+* Certificações
+
+---
+
+## 8. TAMANHO DE MERCADO (TAM / SAM / SOM)
+
+* **TAM (Brasil K-12):** R$ 40 bilhões
+* **SAM (privado + digital):** R$ 12 bilhões
+* **SOM (5 anos):** R$ 1,2 bilhão
+
+Globalmente, a Mentora é exportável.
+
+---
+
+## 9. VALIDAÇÃO E MÉTRICAS
+
+### MVP (Primeiros 90 dias)
+
+* 100–300 famílias
+* Retenção > 60%
+* Conversão freemium → premium: 20%
+* NPS > 50
+
+### Indicadores-chave
+
+* CAC < R$ 15
+* LTV > R$ 400
+* Payback < 3 meses
+
+---
+
+## 10. ROADMAP
+
+### Ano 1
+
+* Ensino Fundamental
+* Diagnóstico BNCC
+* B2C + escolas privadas
+
+### Ano 2
+
+* ENEM + concursos
+* APIs educacionais
+* B2G piloto
+
+### Ano 3
+
+* Escala nacional
+* Contratos estaduais
+* Internacionalização LATAM
+
+---
+
+## 11. RISCOS E MITIGAÇÃO
+
+* 🔒 LGPD: anonimização + consentimento parental
+* 🏛️ Regulação: alinhamento MEC/BNCC
+* 🤖 IA: validação com educadores
+
+---
+
+## 12. VISÃO DE FUTURO
+
+A **Mentora** não será apenas uma EdTech.
+
+Ela será:
+
+* O padrão nacional de diagnóstico educacional
+* A base de decisões educacionais públicas
+* O maior banco de inteligência educacional do país
+
+---
+
+## 13. FRASE FINAL PARA INVESTIDORES
+
+> “A Mentora não vende aulas. Ela vende clareza. E clareza muda destinos.”
+
+---
+
+📌 **Status:** Projeto validável, escalável e com potencial de unicórnio.
