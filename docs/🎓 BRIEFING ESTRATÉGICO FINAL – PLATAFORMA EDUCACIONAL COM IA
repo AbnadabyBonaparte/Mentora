@@ -319,3 +319,248 @@ Todas disponíveis no Google Fonts.
 🔁 *Transformando IA + Educação em Visual memorável e eficaz*  
 📈 *Engajamento Visual Garantido: 73%+ | ROI Criativo: 420%+*
 
+
+
+  
+
+---
+
+## 🚨 REGRAS INVIOLÁVEIS (100% OBRIGATÓRIAS – SEM EXCEÇÕES)
+
+1. **TUDO DEVE SER 100% REAL**  
+   - **Nenhum** mock data, placeholder, array fake, "dados de teste" ou "TODO: integrar".  
+   - Todo conteúdo (diagnósticos, respostas, progresso, relatórios, trilhas) **vem do Supabase**.  
+   - Se não está conectado ao banco → a funcionalidade **não existe**.
+
+2. **ZERO PLACEHOLDERS / "EM CONSTRUÇÃO"**  
+   - Páginas "Under Construction", "Em breve" ou arquivos com apenas um título + comentário TODO são **proibidos**.  
+   - Se a funcionalidade não está minimamente pronta → **não criar** a rota, menu ou arquivo.
+
+3. **BANCO DE DADOS PRIMEIRO**  
+   Antes de criar qualquer página ou feature:  
+   - Tabela deve existir no Supabase  
+   - RLS (Row Level Security) configurada (filtrar por `student_id` ou `parent_id`)  
+   - Índices criados para performance  
+   - Trigger de `updated_at` configurado  
+   - Campos sensíveis (respostas, notas) protegidos
+
+4. **TRATAMENTO OBRIGATÓRIO DOS 4 ESTADOS EM TODA TELA QUE BUSCA DADOS**  
+   - **Loading** → Skeleton ou LoadingSpinner amigável  
+   - **Error** → Card de erro com mensagem clara + botão "Tentar novamente"  
+   - **Empty** → EmptyState bonito, acolhedor e acionável (ex: "Faça seu primeiro diagnóstico agora!")  
+   - **Success** → Conteúdo real do banco
+
+5. **SEGURANÇA E LGPD (DADOS DE MENORES)**  
+   - Consentimento parental explícito e destacado (obrigatório para menores de 18 anos)  
+   - Sempre filtrar por `student_id` ou `parent_id` (RLS forte)  
+   - Dados sensíveis anonimizados quando possível  
+   - Auditoria inicial de conformidade LGPD recomendada  
+   - Proibido logar dados pessoais no console
+
+6. **NUNCA CORES HARDCODED**  
+   - Sempre usar CSS variables: `var(--surface)`, `var(--text-primary)`, `var(--accent-success)`, etc.  
+   - Status:  
+     - Acertos → `--accent-success`  
+     - Atenção → `--accent-warning`  
+     - Erro → `--accent-alert`
+
+7. **COMPONENTES shadcn/ui OBRIGATÓRIOS**  
+   - Usar Card, Button, Badge, Table, Dialog, Skeleton, Toast, Input, Select, etc.  
+   - Proibido criar divs customizadas para botões, cards, tabelas ou modais.
+
+8. **BUILD E TYPECHECK DEVEM PASSAR**  
+   - `npm run build` sem erros  
+   - `tsc --noEmit` sem warnings críticos  
+   - Antes de commit/push
+
+---
+
+## 🏗️ ARQUITETURA CANÔNICA – MENTORA
+
+### Estrutura de Pastas
+
+```
+MENTORA/
+├── src/
+│   ├── components/
+│   │   ├── ui/                     ← shadcn/ui (NÃO MODIFICAR!)
+│   │   ├── common/                 ← EmptyState, LoadingSpinner, ErrorCard, AvatarIA, ToastWrapper
+│   │   ├── layout/                 ← HeaderAluno, HeaderPais, Footer, SidebarAluno, SidebarPais
+│   │   └── features/               ← DiagnosticoProgress, TrailCard, ReportSummary, ConquistaBadge
+│   ├── hooks/
+│   │   ├── useAuth.ts
+│   │   ├── useStudent.ts           ← aluno atual + dados do responsável
+│   │   ├── useParent.ts            ← responsável logado
+│   │   ├── useTheme.ts
+│   │   └── useToast.ts
+│   ├── lib/
+│   │   ├── supabase/
+│   │   │   ├── index.ts            ← client supabase
+│   │   │   ├── types.ts            ← Student, Assessment, Answer, Trail, Progress...
+│   │   │   ├── queries/            ← funções reutilizáveis
+│   │   │   └── useAuthStore.ts     ← Zustand ou Jotai para auth
+│   │   ├── utils.ts                ← cn(), formatters (ex: formatar nota, tempo)
+│   │   └── constants.ts
+│   ├── pages/
+│   │   ├── DashboardAluno.tsx
+│   │   ├── Diagnostico.tsx
+│   │   ├── Relatorio.tsx
+│   │   ├── AulasIA.tsx
+│   │   ├── Progresso.tsx
+│   │   ├── PerfilAluno.tsx
+│   │   ├── Pais/
+│   │   │   ├── DashboardPais.tsx
+│   │   │   ├── RelatoriosFilhos.tsx
+│   │   │   └── PerfilFilho.tsx
+│   │   └── Concursos/              ← ENEM, vestibulares (futuro)
+│   ├── features/
+│   │   ├── adaptive-test/          ← Lógica do diagnóstico adaptativo
+│   │   ├── avatar-ia/              ← Componente + lógica do avatar (voz, animação)
+│   │   ├── gamification/           ← Pontos, badges, ranking, streaks
+│   │   └── microlearning/          ← Vídeos curtos, exercícios rápidos
+│   ├── styles/
+│   │   ├── globals.css
+│   │   └── themes.css              ← Todas as variáveis CSS
+│   └── App.tsx
+│       └── main.tsx
+├── public/
+│   └── assets/                     ← Ícones, avatares, imagens educativas
+└── docs/
+    └── ROADMAP.md
+```
+
+### Sistema de Temas (4 Temas Amigáveis)
+
+| ID                  | Nome                  | Público-Alvo            | Cor Principal          |
+|---------------------|-----------------------|-------------------------|------------------------|
+| `infantil-alegre`   | Infantil Alegre       | 6–10 anos               | Amarelo / Azul claro   |
+| `jovem-foco`        | Jovem Foco            | 11–17 anos              | Roxo / Verde moderno   |
+| `modo-noite`        | Modo Noturno          | Todos (reduz fadiga)    | Cinza escuro / Azul    |
+| `alto-contraste`    | Alto Contraste        | Acessibilidade          | Preto / Branco forte   |
+
+**Principais CSS Variables** (em `themes.css`):
+
+```css
+/* Backgrounds */
+--bg                 /* Fundo principal */
+--surface            /* Cards, painéis */
+--surface-strong     /* Hover/active */
+
+/* Texts */
+--text-primary
+--text-secondary
+--text-muted
+
+/* Accents */
+--accent-success     /* Verde - acertos */
+--accent-warning     /* Amarelo - atenção */
+--accent-alert       /* Vermelho - erro */
+--accent-primary     /* Cor principal do tema */
+--accent-secondary
+
+/* Borders & Glows */
+--border
+--border-strong
+--glow-success
+```
+
+### Padrão Canônico de Página
+
+```tsx
+// src/pages/Exemplo.tsx
+import { useState, useEffect } from 'react'
+import { supabase } from '@/lib/supabase'
+import { useStudent } from '@/hooks/useStudent'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Skeleton } from '@/components/ui/skeleton'
+import { Button } from '@/components/ui/button'
+import { EmptyState } from '@/components/common/EmptyState'
+import toast from 'react-hot-toast'
+
+export default function Exemplo() {
+  const { studentId } = useStudent()
+  const [data, setData] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (!studentId) return
+    fetchData()
+  }, [studentId])
+
+  async function fetchData() {
+    try {
+      setLoading(true)
+      const { data, error } = await supabase
+        .from('progresso')
+        .select('*')
+        .eq('student_id', studentId)
+        .order('created_at', { ascending: false })
+
+      if (error) throw error
+      setData(data || [])
+    } catch (err: any) {
+      setError(err.message)
+      toast.error(`Erro ao carregar: ${err.message}`)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  if (loading) return <Skeleton className="h-64 w-full rounded-xl" />
+  if (error) {
+    return (
+      <Card className="border-[var(--accent-alert)]/30 mx-4 my-6">
+        <CardContent className="p-6 text-center">
+          <p className="text-[var(--accent-alert)] mb-4">Erro: {error}</p>
+          <Button onClick={fetchData}>Tentar novamente</Button>
+        </CardContent>
+      </Card>
+    )
+  }
+  if (data.length === 0) {
+    return (
+      <EmptyState
+        title="Nenhum progresso ainda"
+        description="Comece fazendo seu primeiro diagnóstico!"
+        actionLabel="Iniciar Diagnóstico"
+        onAction={() => {/* redirecionar */}}
+      />
+    )
+  }
+
+  return (
+    <div className="p-4 md:p-6 space-y-6">
+      <h1 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)]">Meu Progresso</h1>
+      {/* Conteúdo real */}
+    </div>
+  )
+}
+```
+
+---
+
+## ✅ CHECKLIST PRÉ-COMMIT (OBRIGATÓRIO)
+
+Antes de commitar:
+
+- [ ] Zero cores hardcoded
+- [ ] Usando apenas shadcn/ui para componentes básicos
+- [ ] Queries filtram por `student_id` / `parent_id`
+- [ ] 4 estados tratados (loading, error, empty, success)
+- [ ] Nenhum mock/placeholder/TODO/FIXME
+- [ ] Build passa (`npm run build`)
+- [ ] TypeScript sem erros críticos (`tsc --noEmit`)
+- [ ] Responsividade testada (mobile-first)
+- [ ] Toast para feedback de ações (sucesso/erro)
+
+---
+
+**Essa é a fonte de verdade para todo o desenvolvimento da MENTORA.**  
+**Violar essas regras gera retrabalho imediato.**
+
+**Lembrete final:**  
+> "Se não está conectado ao Supabase e não trata os 4 estados → não existe."
+
+
+```
