@@ -65,9 +65,9 @@ export function serveStatic(app: Express) {
     const altPath = path.resolve(import.meta.dirname, "../..", "dist", "public");
     if (fs.existsSync(altPath)) {
       console.log(`Using alternative path: ${altPath}`);
-      app.use(express.static(altPath));
-      app.use("*", (_req, res) => {
-        res.sendFile(path.resolve(altPath, "index.html"));
+      (app as any).use(express.static(altPath));
+      (app as any).use("*", (_req: any, res: any) => {
+        (res as any).sendFile(path.resolve(altPath, "index.html"));
       });
       return;
     }
