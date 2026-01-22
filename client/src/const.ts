@@ -4,14 +4,31 @@ export { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
 export const getLoginUrl = () => {
   const oauthPortalUrl = import.meta.env.VITE_OAUTH_PORTAL_URL;
   const appId = import.meta.env.VITE_APP_ID;
+  
+  // Validate required environment variables
+  if (!oauthPortalUrl || typeof oauthPortalUrl !== 'string') {
+    console.error('[getLoginUrl] VITE_OAUTH_PORTAL_URL is not defined');
+    return '/'; // Fallback to home page
+  }
+  
+  if (!appId || typeof appId !== 'string') {
+    console.error('[getLoginUrl] VITE_APP_ID is not defined');
+    return '/'; // Fallback to home page
+  }
+  
   const redirectUri = `${window.location.origin}/api/oauth/callback`;
   const state = btoa(redirectUri);
 
-  const url = new URL(`${oauthPortalUrl}/app-auth`);
-  url.searchParams.set("appId", appId);
-  url.searchParams.set("redirectUri", redirectUri);
-  url.searchParams.set("state", state);
-  url.searchParams.set("type", "signIn");
+  try {
+    const url = new URL(`${oauthPortalUrl}/app-auth`);
+    url.searchParams.set("appId", appId);
+    url.searchParams.set("redirectUri", redirectUri);
+    url.searchParams.set("state", state);
+    url.searchParams.set("type", "signIn");
 
-  return url.toString();
+    return url.toString();
+  } catch (error) {
+    console.error('[getLoginUrl] Invalid URL:', error);
+    return '/'; // Fallback to home page
+  }
 };

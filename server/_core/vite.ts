@@ -43,7 +43,11 @@ export async function setupVite(app: Express, server: Server) {
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
       if (next && typeof next === 'function') {
-        (next as express.NextFunction)(e);
+        try {
+          (next as any)(e);
+        } catch {
+          // Ignore errors in next handler
+        }
       }
     }
   });

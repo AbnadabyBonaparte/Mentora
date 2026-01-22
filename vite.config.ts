@@ -91,7 +91,7 @@ function vitePluginManusDebugCollector() {
               src: "/__manus__/debug-collector.js",
               defer: true,
             },
-            injectTo: "head",
+            injectTo: "head" as const,
           },
         ],
       };
