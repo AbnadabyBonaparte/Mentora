@@ -20,9 +20,9 @@ export async function setupVite(app: Express, server: Server) {
     appType: "custom",
   });
 
-  app.use(vite.middlewares);
-  app.use("*", async (req: express.Request, res: express.Response, next: express.NextFunction) => {
-    const url = req.originalUrl;
+  (app as any).use(vite.middlewares);
+  (app as any).use("*", async (req: express.Request, res: express.Response, next: express.NextFunction) => {
+    const url = (req as any).originalUrl;
 
     try {
       const clientTemplate = path.resolve(
@@ -39,10 +39,10 @@ export async function setupVite(app: Express, server: Server) {
         `src="/src/main.tsx?v=${nanoid()}"`
       );
       const page = await vite.transformIndexHtml(url, template);
-      res.status(200).set({ "Content-Type": "text/html" }).end(page);
+      (res as any).status(200).set({ "Content-Type": "text/html" }).end(page);
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
-      next(e);
+      if (next) next(e);
     }
   });
 }
@@ -73,10 +73,10 @@ export function serveStatic(app: Express) {
     }
   }
 
-  app.use(express.static(distPath));
+  (app as any).use(express.static(distPath));
 
   // fall through to index.html if the file doesn't exist
-  app.use("*", (_req: express.Request, res: express.Response) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
+  (app as any).use("*", (_req: express.Request, res: express.Response) => {
+    (res as any).sendFile(path.resolve(distPath, "index.html"));
   });
 }
