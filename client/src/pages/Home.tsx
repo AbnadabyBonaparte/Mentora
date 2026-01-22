@@ -233,7 +233,7 @@ export default function Home() {
 
           <div className="rounded-2xl overflow-hidden shadow-xl hover-lift animate-fade-in-up" style={{animationDelay: '0.3s'}}>
             <img 
-              src="/family-learning.jpg" 
+              src="/b2c-banner.jpg" 
               alt="Famílias Engajadas" 
               className="w-full h-96 object-cover"
             />
