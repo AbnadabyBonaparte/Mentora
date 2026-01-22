@@ -42,7 +42,9 @@ export async function setupVite(app: Express, server: Server) {
       (res as any).status(200).set({ "Content-Type": "text/html" }).end(page);
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
-      if (next) next(e);
+      if (next && typeof next === 'function') {
+        (next as express.NextFunction)(e);
+      }
     }
   });
 }
@@ -76,7 +78,7 @@ export function serveStatic(app: Express) {
   (app as any).use(express.static(distPath));
 
   // fall through to index.html if the file doesn't exist
-  (app as any).use("*", (_req: express.Request, res: express.Response) => {
+  (app as any).use("*", (_req: any, res: any) => {
     (res as any).sendFile(path.resolve(distPath, "index.html"));
   });
 }
